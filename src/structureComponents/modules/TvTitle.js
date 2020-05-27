@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 
 const TvTitle = styled.h2`
+    margin: 0;
     font-size: ${props => {
         if (props.small) return "16px"
         else if (props.medium) {
@@ -12,6 +13,8 @@ const TvTitle = styled.h2`
             return "22px"
         } else if (props.xXLarge) {
             return "24px"
+        } else if (props.superTitle) {
+            return "42px"
         }
         
         return "18px"

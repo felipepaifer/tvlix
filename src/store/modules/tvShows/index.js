@@ -1,8 +1,9 @@
 // MUTATIONS
-import { SET_TV_SHOWS } from "./mutations"
+import {SET_TV_SHOW_SUGGESTION, SET_TV_SHOWS} from "./mutations"
 
 const initialState = {
-    tvShows: []
+    tvShows: [],
+    tvShowSuggestion: null
 }
 
 const reducer = (state = initialState, action) => {
@@ -10,6 +11,8 @@ const reducer = (state = initialState, action) => {
         case SET_TV_SHOWS:
             return{ ...state, tvShows: action.payload }
             break
+        case SET_TV_SHOW_SUGGESTION:
+            return { ...state, tvShowSuggestion: action.payload }
         default:
             return state;
     }
