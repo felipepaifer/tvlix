@@ -8,7 +8,7 @@ export default function CombinedRoutes(props) {
         <Switch>
             <Route
                 exact
-                path="/"
+                path="/tv-shows"
                 component={() => <TvShows {...props}/>} />
         </Switch>
     )
