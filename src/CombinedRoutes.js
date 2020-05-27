@@ -6,10 +6,8 @@ import TvShows from "./views/TvShows/TvShows";
 export default function CombinedRoutes(props) {
     return (
         <Switch>
-            <Route
-                exact
-                path="/tv-shows"
-                component={() => <TvShows {...props}/>} />
+            <Route exact path="/" component={() => <TvShows {...props}/>} />
+            <Route exact path="/tv-shows" component={() => <TvShows {...props} />} />
         </Switch>
     )
 }

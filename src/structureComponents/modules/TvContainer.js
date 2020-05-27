@@ -72,6 +72,7 @@ const TvContainer = styled.div`
         else if (props.justifyCenter) return "center"
         else if (props.justifyStart) return "flex-start"
         else if (props.justifyEnd) return "flex-end"
+        else if (props.end) return "end"
     }};
     align-items: ${props => {
         if (props.alignCenter) return "center"
@@ -119,6 +120,11 @@ const TvContainer = styled.div`
 
     &:hover{
         background-color: ${props => props.bgColorOnHover ? props.bgColorOnHover : null};
+    }
+    
+    &::after{
+      content: ${props => props.wrap ? "''": null};
+      flex: ${props => props.wrap ? "auto" : null};
     }
 
     @media only screen and (max-width: 600px){

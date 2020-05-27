@@ -10,7 +10,6 @@ const reducer = (state = initialState, action) => {
         case SET_TV_SHOWS:
             return{ ...state, tvShows: action.payload }
             break
-
         default:
             return state;
     }

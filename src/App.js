@@ -12,6 +12,7 @@ import CombinedRoutes from "./CombinedRoutes";
 
 // STRUCTURE COMPONENTS
 import { TvPageWrapper, TvContainer } from "./structureComponents/index";
+import NavBar from "./businessComponents/NavBar/NavBar";
 
 
 function App() {
@@ -21,11 +22,12 @@ function App() {
         <TvPageWrapper>
           <Router history={history}>
             <Switch>
-              <TvContainer fluid flex>
                 <TvContainer>
-                  <CombinedRoutes />
+                    <NavBar />
+                    <TvContainer fluid absolute mt="70px">
+                      <CombinedRoutes />
+                    </TvContainer>
                 </TvContainer>
-              </TvContainer>
             </Switch>
           </Router>
         </TvPageWrapper>
