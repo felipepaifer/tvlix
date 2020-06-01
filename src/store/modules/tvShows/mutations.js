@@ -1,0 +1,2 @@
+export const SET_TV_SHOWS = "SET_TV_SHOWS"
+export const SET_TV_SHOW_SUGGESTION = "SET_TV_SHOW_SUGGESTION"

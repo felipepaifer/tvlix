@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// LIBRARIES
+import React, {useState} from 'react';
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import history  from "./routes/history";
+import { Provider } from 'react-redux';
+
+// STORE
+import store from './store'
+
+// VIEWS
+import CombinedRoutes from "./CombinedRoutes";
+
+// STRUCTURE COMPONENTS
+import { TvPageWrapper, TvContainer } from "./structureComponents/index";
+import NavBar from "./businessComponents/NavBar/NavBar";
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Provider store={store}>
+        <TvPageWrapper>
+          <Router history={history}>
+            <Switch>
+                <TvContainer>
+                    <NavBar />
+                    <TvContainer fluid absolute mt="70px">
+                      <CombinedRoutes />
+                    </TvContainer>
+                </TvContainer>
+            </Switch>
+          </Router>
+        </TvPageWrapper>
+      </Provider>
   );
 }
 
-export default App;
+export default App
