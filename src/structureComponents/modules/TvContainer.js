@@ -117,6 +117,9 @@ const TvContainer = styled.div`
     overflow: ${props => props.overflowAuto ? "auto" : null};
     right: ${props => props.right ? props.right : null};
     z-index: ${props => props.zIndex ? props.zIndex : null};
+    text-overflow: ${props => props.ellipsis ? "ellipsis" : null};
+    white-space: ${props => props.ellipse ? "nowrap" : null};
+    color: ${props => props.color ? props.color : null};
 
     &:hover{
         background-color: ${props => props.bgColorOnHover ? props.bgColorOnHover : null};
