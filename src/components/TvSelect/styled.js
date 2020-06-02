@@ -10,6 +10,7 @@ export const TvSelectAnchor = styled.div`
     max-width: 16em;
     padding: 0 20px;
     border: 1px solid white;
+    box-sizing: border-box;
     cursor: pointer;
 `
 
@@ -30,6 +31,7 @@ export const TvSelectAnchorPlaceholder = styled.label`
 export const TvSelectDropdown = styled.div`
   width: 100%;
   max-width: 16em;
+  box-sizing: border-box;
   background-color: white;
   padding: 10px;
   opacity: ${props => props.active ? 1 : 0};
