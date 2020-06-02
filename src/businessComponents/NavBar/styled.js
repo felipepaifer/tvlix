@@ -12,6 +12,12 @@ export const NavBarContainer = styled.div`
   z-index: 100;
   justify-content: space-between;
   box-shadow: 1px 1px 8px #0000007d;
+  
+  @media only screen and (max-width: 600px ){
+    .nav-bar--hide-on-mobile{
+      display: none;
+    }
+  }
 `;
 
 export const NavList = styled.ul`

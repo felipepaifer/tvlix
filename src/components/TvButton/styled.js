@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import {textDefault} from "../../assets/colorPallet";
 
 
 export const TvButtonStyled = styled.button`
@@ -18,7 +19,7 @@ export const TvButtonStyled = styled.button`
   font-size: 16px;
   border: none;
   cursor: pointer;
-  color: ${props => props.color ? props.color : "#333"};
+  color: ${props => props.color ? props.color : textDefault};
   
   
   &:hover {

@@ -1,18 +1,20 @@
 // LIBRARIES
-import React, {useState} from 'react';
-import { BrowserRouter as Router, Switch } from "react-router-dom";
-import history  from "./routes/history";
-import { Provider } from 'react-redux';
+import React, {useState} from 'react'
+import { BrowserRouter as Router, Switch } from "react-router-dom"
+import history  from "./routes/history"
+import { Provider } from 'react-redux'
 
 // STORE
 import store from './store'
 
 // VIEWS
-import CombinedRoutes from "./CombinedRoutes";
+import CombinedRoutes from "./CombinedRoutes"
 
 // STRUCTURE COMPONENTS
-import { TvPageWrapper, TvContainer } from "./structureComponents/index";
-import NavBar from "./businessComponents/NavBar/NavBar";
+import { TvPageWrapper, TvContainer } from "./structureComponents/index"
+
+// BUSINESS COMPONENTS
+import NavBar from "./businessComponents/NavBar/NavBar"
 
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
                 <TvContainer>
                     <NavBar />
                     <TvContainer fluid absolute mt="70px">
-                      <CombinedRoutes />
+                      <CombinedRoutes  />
                     </TvContainer>
                 </TvContainer>
             </Switch>

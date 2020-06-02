@@ -1,14 +1,16 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { withRouter } from "react-router-dom";
 
 // ASSETS
 import {NavBarContainer, NavItem, NavList, NavListItem} from "./styled"
 import TvLabel from "../../structureComponents/modules/TvLabel";
 import TvContainer from "../../structureComponents/modules/TvContainer";
 import TvButton from "../../components/TvButton/TvButton";
+import SearchTvShows from "../SearchTvShows/SearchTvShows";
 
 
-export default function NavBar() {
+function NavBar(props) {
     return (
         <NavBarContainer>
             <TvContainer flex alignCenter>
@@ -19,9 +21,12 @@ export default function NavBar() {
                            <Link to="/tv-shows">TV Shows</Link>
                        </NavListItem>
                    </NavList>
+                    <TvContainer ml="40px">
+                        <SearchTvShows history={props.history} />
+                    </TvContainer>
                 </TvContainer>
             </TvContainer>
-            <TvContainer flex alignCenter>
+            <TvContainer className="nav-bar--hide-on-mobile" flex alignCenter>
                 <TvContainer>
                     <TvButton transparent color="white">Login</TvButton>
                 </TvContainer>
@@ -32,3 +37,6 @@ export default function NavBar() {
         </NavBarContainer>
     )
 }
+
+
+export default withRouter(NavBar)
